@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "version": "1",
+  "version": "2",
   "name": "github+pr+travis",
   "description": "Display build status on github projects pull request list.",
 

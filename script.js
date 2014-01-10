@@ -1,7 +1,24 @@
-var el = window.document.querySelector('.pulls-list-group');
-if (el) { insertStatusIcon(el); }
+// ==UserScript==
+// @name       github-travis-chrome-extension
+// @version    0.2
+// @match      https://github.com/*
+// @copyright  2014 Adrien Brault
+// ==/UserScript==
 
-function insertStatusIcon(el) {
+$(insertStatusesIfPullList);
+
+// Will not work in the chrome extension, only as a user script
+$(document).on('pjax:end', insertStatusesIfPullList);
+
+function insertStatusesIfPullList() {
+    console.log('yo');
+    $('.pulls-list-group').each(function () {
+        console.log(this);
+        insertStatuses(this);
+    });
+}
+
+function insertStatuses(el) {
     var $el = $(el);
 
     $el.find('.list-group-item').each(function () {
