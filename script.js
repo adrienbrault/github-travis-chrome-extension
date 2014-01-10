@@ -11,9 +11,7 @@ $(insertStatusesIfPullList);
 $(document).on('pjax:end', insertStatusesIfPullList);
 
 function insertStatusesIfPullList() {
-    console.log('yo');
     $('.pulls-list-group').each(function () {
-        console.log(this);
         insertStatuses(this);
     });
 }
