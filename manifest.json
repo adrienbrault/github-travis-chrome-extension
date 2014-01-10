@@ -1,9 +1,8 @@
 {
   "manifest_version": 2,
-
-  "version": "7",
-  "name": "github+travis",
-  "description": "Display build status next to the project name on github.",
+  "version": "1",
+  "name": "github+pr+travis",
+  "description": "Display build status on github projects pull request list.",
 
   "icons": {
     "16":  "icon-16.png",
@@ -12,7 +11,7 @@
   },
 
   "content_scripts": [ {
-    "js":      [ "script.js" ],
+    "js":      [ "jquery-2.1.0-beta3.js", "script.js" ],
     "matches": [ "https://github.com/*" ],
     "run_at":  "document_idle"
   } ]
