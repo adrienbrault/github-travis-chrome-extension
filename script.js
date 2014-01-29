@@ -28,10 +28,10 @@ function insertStatuses(el) {
         $.ajax({
             url: pullRequestStatusPath,
             success: function (data) {
-                $this.append(data).find('p').css({
+                $this.append($('<div>').append(data).css({
                     'margin-top': '5px',
-                    'margin-bottom': '0'
-                });
+                    'padding-left': '15px'
+                }));
             }
         });
     });
