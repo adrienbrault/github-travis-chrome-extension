@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       github-travis-chrome-extension
-// @version    0.2
-// @match      https://github.com/*
+// @version    0.3
+// @match      https://github.com/*/*/pulls*
 // @copyright  2014 Adrien Brault
 // ==/UserScript==
 
@@ -28,10 +28,10 @@ function insertStatuses(el) {
         $.ajax({
             url: pullRequestStatusPath,
             success: function (data) {
-                $this.append(data).find('p').css({
+                $this.append($('<div>').append(data).css({
                     'margin-top': '5px',
-                    'margin-bottom': '0'
-                });
+                    'padding-left': '15px'
+                }));
             }
         });
     });
