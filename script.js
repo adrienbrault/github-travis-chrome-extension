@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       github-travis-chrome-extension
-// @version    0.2
+// @version    0.3
 // @match      https://github.com/*
 // @copyright  2014 Adrien Brault
 // ==/UserScript==
