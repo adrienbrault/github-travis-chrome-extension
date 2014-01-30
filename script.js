@@ -28,10 +28,7 @@ function insertStatuses(el) {
         $.ajax({
             url: pullRequestStatusPath,
             success: function (data) {
-                $this.append($('<div>').append(data).css({
-                    'margin-top': '5px',
-                    'padding-left': '15px'
-                }));
+                $this.append(data);
             }
         });
     });
