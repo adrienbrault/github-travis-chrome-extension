@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name       github-travis-chrome-extension
-// @version    0.4
-// @match      https://github.com/*/*/pulls*
+// @version    0.5
+// @include    https://github.com/*/*/pulls*
+// @include    https://github.com/dashboard/pulls
 // @copyright  2014 Adrien Brault
 // ==/UserScript==
 
